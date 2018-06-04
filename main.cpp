@@ -51,7 +51,7 @@ int main ()
 
             drawPrompt (buffer);
         }
-        else if (key == '\n' || key == '\r' || key == KEY_ENTER)
+        else if ((key == '\n' || key == '\r' || key == KEY_ENTER) && buffer != "")
         {
             s.push (stod (buffer));
             buffer = "";

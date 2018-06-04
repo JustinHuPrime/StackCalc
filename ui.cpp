@@ -4,7 +4,6 @@
 #include <ncurses.h>
 #include <locale.h>
 #include <stdlib.h>
-#include <list>
 using std::to_string;
 using CustomADT::NumberStack;
 
