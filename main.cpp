@@ -1,6 +1,5 @@
 #include "ui.h"
 #include "numberStack.h"
-#include <list>
 #include <string>
 #include <ncurses.h>
 using std::string;
