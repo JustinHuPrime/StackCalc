@@ -9,13 +9,13 @@ namespace CustomADT
             NumberStack ();
             ~NumberStack ();
 
-            void push (double);
-            double pop ();
-            double peek () const;
+            void push (double); //adds value to stack
+            double pop (); //removes value from stack and returns that value
+            double peek () const; //returns value from top of stack
             int getLength () const;
-            bool isEmpty () const;
+            bool isEmpty () const; 
 
-            double& operator[] (int) const;
+            double& operator[] (int) const; //gets the n'th element - O(n).
 
         private:
             struct Node

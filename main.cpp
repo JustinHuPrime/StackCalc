@@ -25,7 +25,7 @@ int main ()
     {
         key = getch ();
 
-        if (isdigit (key))
+        if (isdigit (key)) // number input
         {
             buffer += key;
             drawPrompt (buffer);
@@ -38,7 +38,7 @@ int main ()
         }
         else if (key == KEY_BACKSPACE)
         {
-            hasDot = !(buffer[buffer.length () - 1] == '.');
+            hasDot = hasDot && !(buffer[buffer.length () - 1] == '.');
             
             if (buffer.length () > 1)
             {
@@ -60,7 +60,7 @@ int main ()
             draw (s, buffer);
             drawPrompt (buffer);
         }
-        else if (key == DROP && s.getLength () >= 1)
+        else if (key == DROP && s.getLength () >= 1) // comands
         {
             s.pop ();
             draw (s, buffer);
@@ -89,9 +89,17 @@ int main ()
         else if (key == '/' && s.getLength () >= 2)
         {
             second = s.pop ();
-            first = s.pop ();
-            s.push (first / second);
-            draw (s, buffer);
+            if (second == 0)
+            {
+                s.push (second);
+                drawError ();
+            }
+            else
+            {
+                first = s.pop ();
+                s.push (first / second);
+                draw (s, buffer);
+            }
         }
         else if (key == KEY_UP && s.getLength () >= 2)
         {

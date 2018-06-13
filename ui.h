@@ -6,9 +6,10 @@
 using std::string;
 using CustomADT::NumberStack;
 
-void init ();
-void uninit ();
-void draw (const NumberStack&, const string&);
-void drawPrompt (const string&);
+void init (); //initializes ncurses
+void uninit (); //ends ncurses
+void draw (const NumberStack&, const string&); //draws the stack area
+void drawPrompt (const string&); //updates the prompt
+void drawError ();
 
 #endif /* UI_H */

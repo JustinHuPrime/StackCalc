@@ -79,3 +79,14 @@ void drawPrompt (const string& s)
 
     refresh ();
 }
+
+void drawError ()
+{
+    int maxY = getmaxy (stdscr);
+
+    move (maxY - 1, 2);
+    printw ("Error: divide by zero attempted.");
+    move (maxY - 1, 2);
+
+    refresh ();
+}
