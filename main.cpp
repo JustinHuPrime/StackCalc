@@ -2,9 +2,11 @@
 #include "numberStack.h"
 #include <string>
 #include <ncurses.h>
+#include <cmath>
 using std::string;
 using std::stod;
 using CustomADT::NumberStack;
+using std::pow;
 
 char QUIT = 'q';
 int DROP = KEY_DC;
@@ -100,6 +102,12 @@ int main ()
                 s.push (first / second);
                 draw (s, buffer);
             }
+        }
+        else if (key == 'p' && s.getLength() >= 2) {
+            second = s.pop();
+            first = s.pop();
+            s.push(pow (first, second));
+            draw(s, buffer);
         }
         else if (key == KEY_UP && s.getLength () >= 2)
         {
