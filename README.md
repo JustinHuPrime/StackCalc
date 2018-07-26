@@ -1,7 +1,7 @@
 # StackCalc
 
 Stack based command line interface calculator.
-
+Copyright 2018 [Justin Hu](mailto:justin.hu@alumni.ubc.ca).
 This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions. For more detail see the  LICENSE file that should have been included with this program.
 
 ## Getting Started
@@ -21,7 +21,3 @@ The calculator does not take command line arguments. Within the calculator, the 
 * +, -, *, /: performs an arithmetic operation, with the first being the right hand side
 * DEL: drops one element from the stack
 * UP: swaps the positions of the first and second elements
-
-## Copyright
-
-Copyright 2018 [Justin Hu](mailto:justin.hu@alumni.ubc.ca).
